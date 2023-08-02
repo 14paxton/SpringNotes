@@ -61,3 +61,27 @@ mvn -Dmaven.test.skip package
 ```shell
 mvn -DskipTests package
 ```
+
+## xml
+
+```xml
+
+<properties>
+    <maven.test.skip>true</maven.test.skip>
+</properties>
+```
+
+```xml
+
+<properties>
+    <tests.skip>true</tests.skip>
+</properties>
+<plugin>
+<groupId>org.apache.maven.plugins</groupId>
+<artifactId>maven-surefire-plugin</artifactId>
+<version>2.22.2</version>
+<configuration>
+    <skipTests>${tests.skip}</skipTests>
+</configuration>
+</plugin>
+```
