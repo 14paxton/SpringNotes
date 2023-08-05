@@ -1,3 +1,34 @@
+---
+title:        Hibernate
+permalink:    SpringNotes/Hibernate
+category:     SpringNotes
+parent:       SpringNotes
+layout:       default
+has_children: false
+share:        true
+shortRepo:
+  - springnotes
+  - default
+---
+
+
+<br/>
+
+<details markdown="block">
+<summary>
+Table of contents
+</summary>
+{: .text-delta }
+1. TOC
+{:toc}
+</details>
+
+<br/>
+
+***
+
+<br/>
+
 # Grails Notes
 
 ## Access to session and hibernate-
@@ -52,6 +83,7 @@ ctx.sessionFactory.getClassMetadata(Team).attributes.collect { it.name }
 ### -get a service-
 
 1.
+
 ```java
 @Autowired 
 HibernateDatastore hibernateDatastore
@@ -61,11 +93,13 @@ HibernateDatastore hibernateDatastore
         this.userDataService=hibernateDatastore.getService(UserDataService)
         }
 ```
+
 2. ```(YourService)Holders.grailsApplication.mainContext["yourService"]```
 3. ```applicationContext."${yourServiceName}".serviceMethod()```
 4. ```ctx.getBean('userGroupService')```
 5. ```Holders.applicationContext.getBean("myService")```
 6.
+
 ```java
  ApplicationContext ctx=(ApplicationContext)ServletContextHolder
         .getServletContext()
